@@ -1,0 +1,210 @@
+@import url('https://fonts.googleapis.com/css2?family=Varela+Round&display=swap');
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  margin: auto;
+  width: 100%;
+  max-width: 600px;
+  background-color: #ffffff;
+  background-image: url("bg.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  text-align: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+}
+
+.main {
+  flex-grow: 1;
+}
+
+.noselect {
+  -webkit-touch-callout: none;
+    -webkit-user-select: none;
+     -khtml-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+            user-select: none;
+		-webkit-tap-highlight-color: transparent;
+}
+
+.tab {
+  margin-bottom: 2rem;
+  padding: 1rem 0 1rem;
+	width: 600px;
+	height: 70px;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: bold;
+	color: black;
+	background: #00ebbe;
+	box-shadow: 2px 2px 0 rgb(0, 0, 0),
+		-2px -2px 0 black,
+		-2px 2px 0 black,
+		2px -2px 0 black;
+	transition: 500ms ease-in-out;
+}
+
+.tab:hover {
+	box-shadow: 20px 5px 0 #00ebbe, -20px -5px 0 #00b09d;
+  border:  none;
+  background: #ffffff;
+}
+
+.tab:focus {
+	outline: none;
+}
+
+
+a {
+  text-decoration: none;
+  font-size: 1.25em;
+  font-weight: bold;
+  color: black;
+}
+
+.primaryLink {
+  display: block;
+  max-width: 120px;
+  margin: 1rem auto 1rem;
+  border: 2px solid black;
+  border-radius: 40px;
+  padding: 0.3rem;
+  font-weight: lighter;
+}
+
+.primaryLink:hover {
+  background-color: rgba(47, 255, 141, 0.5);
+}
+
+.primaryLink2 {
+  display: block;
+  max-width: 100px;
+  background-color: transparent;
+  margin: 1rem auto 1rem;
+  border: 1px solid black;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.primaryLink2:hover {
+  background-color: rgba(47, 255, 141, 0.5);
+}
+
+#inputFields {
+  padding: 1rem;
+  padding-left: 30px;
+  width: 100px;
+  margin: 4rem 2rem 2rem;
+  background-color: transparent;
+  font-size: large;
+}
+
+#areaField {
+  width: 7rem;
+  padding: 1rem 1rem;
+  margin: 2rem 1rem 1rem;
+  background-color: transparent;
+}
+
+.radio {
+  text-align: left;
+  padding: 1rem;
+  font-weight: bold;
+}
+
+.questions {
+  display: block;
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 1rem 0.6rem;
+  margin-bottom: 1rem;
+  background-color: #1fc3b3;
+}
+
+
+.footerLink a {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem 2rem 1rem;
+  font-size: 1.1rem;
+  color: black;
+}
+.span{
+  position: relative;
+  display: inline-flex;
+  width: 180px;
+  height: 55px;
+  margin: 0 15px;
+  perspective: 1000px;
+}
+.span a{
+  margin-top: 20px;
+  font-size: 19px;
+  letter-spacing: 1px;
+  transform-style: preserve-3d;
+  transform: translateZ(-25px);
+  transition: transform .25s;
+  font-family: 'Montserrat', sans-serif;
+  
+}
+.span a:before,
+.span a:after{
+  position: absolute;
+  content: "< Go back";
+  height: 55px;
+  width: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 5px solid black;
+  box-sizing: border-box;
+  border-radius: 5px;
+}
+.span a:before{
+  color: #fff;
+  background: #000;
+  transform: rotateY(0deg) translateZ(25px);
+}
+.span a:after{
+  color: #000;
+  transform: rotateX(90deg) translateZ(25px);
+}
+.span a:hover{
+  transform: translateZ(-25px) rotateX(-90deg);
+}
+footer {
+  padding-bottom: 0.5rem;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline-start: 0px;
+  margin-block-start: 0;
+  margin-block-end: 0;
+}
