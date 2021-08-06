@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Area of Triangle</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" />
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="main">
+
+            <h1 style="padding: 1.5rem 0 0.5rem;">Calculate Area</h1>
+            <h2>Select an option below as per the data you have for a triangle</h2>
+
+            <span class="span"><a href="index.html"></a></span>
+
+            <form class="formulaSelectionForm">
+                <div class="radio" style="margin-top: 3.5rem;">
+                    <label class="label" for="calArea1">
+                        <input type="radio" id="calArea1" name="areaCalOption" value="areaCalOption1">
+                        If you have base and height length</label>
+                </div>
+                <div class="radio">
+                    <label class="label" for="calArea2">
+                        <input type="radio" id="calArea2" name="areaCalOption" value="areaCalOption2">
+                        If you have length of 3 sides</label>
+                </div>
+                <div class="radio">
+                    <label class="label" for="calArea3">
+                        <input type="radio" id="calArea3" name="areaCalOption" value="areaCalOption3">
+                        If you have length of 2 sides and included angle</label>
+                </div>
+            </form>
+
+            <div style="margin-top: 1rem; margin-bottom: 1rem;" class="areaCalBlock" hidden>
+
+                <form class="form" class="formForAreaCal">
+                    <label class="label">Base=
+                        <input id="areaField" class="inputBox inputSide inputInOption1" type="number" min="0.0001"
+                            step="0.00001" required>
+                    </label>
+
+                    <label class="label">Height=
+                        <input id="areaField" class="inputBox inputSide inputInOption1" type="number" min="0.0001"
+                            step="0.00001" required>
+                    </label>
+
+                    <button class="button primaryLink2" id="submitBtn">calculate</button>
+                </form>
+                <h2 style="padding-bottom: 5px;">Calculated Area-</h2>
+                <div class="outputHere" style=" font-size: 1.3rem;">
+                    <label class="label">Area=</label>
+                    <div style="display:inline;" class="areaShowHere">1/2*base*height</div>
+                </div>
+            </div>
+
+            <div style="margin-top: 1rem; margin-bottom: 1rem;" class="areaCalBlock" hidden>
+
+                <form class="form" class="formForAreaCal">
+
+                    <label class="label">a=
+                        <input style="background-color: transparent; padding: 0.6rem 0.2rem;"
+                            class="inputBox inputSide inputInOption2" type="number" min="0.0001" step="0.00001"
+                            required>
+                    </label>
+
+                    <label class="label">b=
+                        <input style="background-color: transparent; padding: 0.6rem 0.2rem;"
+                            class="inputBox inputSide inputInOption2" type="number" min="0.0001" step="0.00001"
+                            required>
+                    </label>
+
+                    <label class="label">c=
+                        <input style="background-color: transparent; padding: 0.6rem 0.2rem;"
+                            class="inputBox inputSide inputInOption2" type="number" min="0.0001" step="0.00001"
+                            required>
+                    </label>
+                    <p class="label error" style="color: brown; padding-top: 15px;" hidden>Enter valid side lengths!
+                        Such that the length of one side should be less than the sum of other two sides</p>
+
+                    <button class="button primaryLink2" id="submitBtn">calculate</button>
+                </form>
+                <h2 style="padding-bottom: 5px;">Calculated Area-</h2>
+                <div class="outputHere" style=" font-size: 1.3rem;">
+                    <label class="label">Area=</label>
+                    <div style="display:inline;" class="areaShowHere"><span style="font-size: 1.8rem;">√</span><span
+                            style="border-top:2px solid black; padding-top:0.1rem;">s(s-a)(s-b)(s-c)</span></div>
+                </div>
+            </div>
+
+            <div style="margin-top: 1rem; margin-bottom: 1rem;" class="areaCalBlock" hidden>
+
+                <form class="form" class="formForAreaCal">
+
+                    <label class="label">b=
+                        <input style="background-color: transparent; padding: 0.6rem 0.2rem;"
+                            class="inputBox inputSide inputInOption3" type="number" min="0.0001" step="0.00001"
+                            required>
+                    </label>
+
+                    <label class="label">c=
+                        <input style="background-color: transparent; padding: 0.6rem 0.2rem;"
+                            class="inputBox inputSide inputInOption3" type="number" min="0.0001" step="0.00001"
+                            required>
+                    </label>
+
+                    <label class="label">∠A(deg)=
+                        <input style="background-color: transparent; padding: 0.6rem 0.2rem;"
+                            class="inputBox inputSide inputInOption3" type="number" min="0.0001" step="0.00001"
+                            max="360" required>
+                    </label>
+
+                    <button class="button primaryLink2" id="submitBtn">calculate</button>
+                </form>
+                <h2 style="padding-bottom: 10px;">Calculated Area-</h2>
+                <div class="outputHere" style=" font-size: 1.3rem;">
+                    <label class="label">Area=</label>
+                    <div style="display:inline;" class="areaShowHere">1/2*b*c*sin(A)</div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <ul>
+                <li class="footerLink">
+                    <a href="https://github.com/SubhamChoudhury">
+                        <i class="fab fa-github"></i>
+                    </a>
+                </li>
+                <li class="footerLink">
+                    <a href="https://twitter.com/SubhamC_14">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </li>
+                <li class="footerLink">
+                    <a href="https://www.linkedin.com/in/subham-choudhury/">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                </li>
+                <li class="footerLink">
+                    <a href="https://subhamchoudhury.tech/">
+                        <i class="fas fa-briefcase"></i>
+                    </a>
+                </li>
+            </ul>
+            <div>
+                <span>
+                    Made with 💚 by <strong>Subham Choudhury</strong>
+                </span>
+            </div>
+        </footer>
+    </div>
+
+    <script src="js/area.js"></script>
+</body>
+
+</html>
